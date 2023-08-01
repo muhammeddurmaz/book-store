@@ -5,11 +5,13 @@ import com.muhammed.bookstore.domain.Order;
 import com.muhammed.bookstore.repository.OrderRepository;
 import com.muhammed.bookstore.service.BookService;
 import com.muhammed.bookstore.service.OrderService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+@Service
 public class OrderServiceImpl implements OrderService {
 
     private final BookService bookService;

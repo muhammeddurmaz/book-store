@@ -10,4 +10,6 @@ public interface BookService {
     Optional<Book> findBookById(Integer bookId);
 
     List<Book> getAllBooks();
+
+    Book createBook(Book book);
 }
