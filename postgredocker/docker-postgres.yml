@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  bookstore-postgresql:
+    image: postgres:14.2
+    volumes:
+      - bookdata:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1234
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    hostname: bookstore-postgresql
+    # If you want to expose these ports outside your dev PC,
+    # remove the "127.0.0.1:" prefix
+    ports:
+      - 5434:5432
+volumes:
+  bookdata:
